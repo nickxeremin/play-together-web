@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Rubik";
+    src: url("/src/assets/fonts/Rubik-VariableFont_wght.woff2") format("woff2");
+    font-weight: 400 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("/src/assets/fonts/Orbitron-VariableFont_wght.woff2")
+        format("woff2");
+    font-weight: 400 900;
+    font-style: normal;
+}
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+    }
+
+    * {
+        @apply border-neutral-800 font-rubik;
+    }
+
+    body {
+        @apply bg-neutral-900 text-slate-100;
+    }
+}
