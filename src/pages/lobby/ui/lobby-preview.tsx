@@ -10,10 +10,10 @@ function LobbyPreview() {
 
     return (
         <div className="flex flex-col">
-            <h1 className="text-center font-orbitron text-[4rem] font-extrabold text-blue-400">
+            <h1 className="text-center font-orbitron text-[4rem] font-extrabold text-teal-400">
                 {title}
             </h1>
-            <p className="text-center text-[1.5rem] font-medium text-blue-200">
+            <p className="text-center text-[1.5rem] font-medium text-teal-100">
                 {description}
             </p>
         </div>
