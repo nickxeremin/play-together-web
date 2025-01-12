@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router"
 
 import AllRoutes from "./routes"
 
+import "./i18n"
 import "./globals.css"
 
 import ReactQueryProvider from "./providers/react-query-provider"

@@ -1,11 +1,12 @@
 import { Outlet } from "react-router"
 
+import Footer from "@/widgets/layout/ui/footer"
 import Header from "@/widgets/layout/ui/header"
 
 function RootLayout() {
     return (
         <div className="relative flex min-h-screen w-screen max-w-[100vw] flex-col overflow-x-hidden">
-            <div className="flex h-screen flex-col bg-neutral-950">
+            <div className="flex h-screen flex-col">
                 <Header />
 
                 <main className="flex h-full flex-col">
@@ -13,7 +14,7 @@ function RootLayout() {
                 </main>
             </div>
 
-            <footer className="h-24 border-t bg-black"></footer>
+            <Footer />
         </div>
     )
 }
