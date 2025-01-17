@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router"
 
 import AliasLayout from "@/pages/alias/ui/layout"
 import AliasPage from "@/pages/alias/ui/page"
-import AliasPlaygroundPage from "@/pages/alias/ui/playground"
+import AliasPlaygroundPage from "@/pages/alias/ui/playground-page"
 import GamesLayout from "@/pages/games/ui/games-layout"
 import GamesPage from "@/pages/games/ui/games-page"
 import HomeLayout from "@/pages/home/ui/home-layout"

@@ -1,11 +1,15 @@
 import { Socket } from "socket.io-client"
 
-import {
-    GameSessionClientToServerEvnets,
-    GameSessionServerToClientEvents,
-} from "./game"
+import { RoomServerToClientEvents } from "./room-events"
 
-export type ServerToClientEvents = GameSessionServerToClientEvents
-export type ClientToServerEvents = GameSessionClientToServerEvnets
+export type ServerToClientEvents = RoomServerToClientEvents
+export type ClientToServerEvents = RoomServerToClientEvents
 
 export type AliasSocket = Socket<ServerToClientEvents, ClientToServerEvents>
+
+export {
+    aliasRoomSchema,
+    createAliasRoomSchema,
+    type AliasRoom,
+    type CreateAliasRoomValues,
+} from "./room-schema"
