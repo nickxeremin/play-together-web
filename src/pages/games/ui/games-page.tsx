@@ -1,7 +1,7 @@
 import { IconChevronLeft } from "@tabler/icons-react"
 import { Link } from "react-router"
 
-import AliasPreviewCard from "@/pages/alias/ui/alias-preview-card"
+import AliasPreviewCard from "@/pages/alias/ui/preview-card"
 import { cn } from "@/shared/lib/utils"
 import { buttonVariants } from "@/shared/ui/button"
 

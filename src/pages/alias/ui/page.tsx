@@ -1,7 +1,11 @@
 import React from "react"
+import { IconChevronLeft } from "@tabler/icons-react"
 import { motion } from "motion/react"
+import { Link } from "react-router"
 
-import { Button } from "@/shared/ui/button"
+import { cn } from "@/shared/lib/utils"
+import { Button, buttonVariants } from "@/shared/ui/button"
+import { Separator } from "@/shared/ui/separator"
 
 import GameSettings from "./game-settings"
 
@@ -13,8 +17,32 @@ function AliasPage() {
     }
 
     return (
-        <div className="flex h-full flex-col items-center justify-center">
-            <GameSettings />
+        <div className="flex flex-grow flex-col gap-4 p-4">
+            <div className="flex items-center gap-2">
+                <Link
+                    to="/"
+                    className={cn(
+                        buttonVariants({
+                            variant: "ghost",
+                            size: "icon",
+                        })
+                    )}
+                >
+                    <IconChevronLeft strokeWidth={3} className="size-6" />
+                </Link>
+
+                <div className="flex flex-col">
+                    <h1 className="text-[3rem] font-extrabold leading-none text-brand-title">
+                        Элиас
+                    </h1>
+                </div>
+            </div>
+
+            <Separator />
+
+            <div className="flex flex-grow flex-col items-center justify-center p-4">
+                <GameSettings />
+            </div>
 
             {/* <div className="relative">
                 <motion.div

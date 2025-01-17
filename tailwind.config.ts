@@ -25,9 +25,10 @@ export default {
                 // Main colors
                 brand: {
                     DEFAULT: "rgb(var(--brand))",
-                    title: "rgb(var(--brand-title))",
                     light: "rgb(var(--brand-light))",
                     dark: "rgb(var(--brand-dark))",
+                    title: "rgb(var(--brand-title))",
+                    subtitle: "rgb(var(--brand-subtitle))",
                 },
                 success: {
                     DEFAULT: "rgb(var(--success))",
@@ -48,6 +49,9 @@ export default {
                 orbitron: ["Orbitron", "sans-serif"],
                 rubik: ["Rubik", "sans-serif"],
             },
+            backgroundImage: {
+                "dotted-pattern": "url('/src/assets/images/bg-dots.png')",
+            },
         },
     },
     plugins: [
@@ -57,7 +61,7 @@ export default {
                 ":root": {
                     // Text colors
                     "--primary": hexToRgb(theme("colors.slate.100")),
-                    "--secondary": hexToRgb(theme("colors.zinc.400")),
+                    "--secondary": hexToRgb(theme("colors.zinc.300")),
                     "--tertiary": hexToRgb(theme("colors.zinc.500")),
 
                     // Component colors
@@ -72,6 +76,7 @@ export default {
                     // Main colors
                     "--brand": hexToRgb(theme("colors.teal.600")),
                     "--brand-title": hexToRgb(theme("colors.teal.400")),
+                    "--brand-subtitle": hexToRgb(theme("colors.teal.200")),
 
                     "--brand-light": hexToRgb(theme("colors.teal.400")),
                     "--brand-dark": hexToRgb(theme("colors.teal.600")),

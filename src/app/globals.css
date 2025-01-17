@@ -31,11 +31,15 @@
     }
 }
 
-/* @layer utilities {
-    .focusable {
-        @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+@layer utilities {
+    .dotted-pattern {
+        @apply relative;
     }
-} */
+
+    .dotted-pattern::before {
+        @apply bg-dotted-pattern absolute inset-0 size-full bg-[length:128px_128px] opacity-5 content-[''];
+    }
+}
 
 /* HTML: <div class="loader"></div> */
 /* .loader {

@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router"
 
-import AliasLayout from "@/pages/alias/ui/alias-layout"
-import AliasPage from "@/pages/alias/ui/alias-page"
+import AliasLayout from "@/pages/alias/ui/layout"
+import AliasPage from "@/pages/alias/ui/page"
+import AliasPlaygroundPage from "@/pages/alias/ui/playground"
 import GamesLayout from "@/pages/games/ui/games-layout"
 import GamesPage from "@/pages/games/ui/games-page"
 import HomeLayout from "@/pages/home/ui/home-layout"
@@ -29,6 +30,11 @@ function AllRoutes() {
 
                 <Route path="/alias" element={<AliasLayout />}>
                     <Route index element={<AliasPage />} />
+
+                    <Route
+                        path=":sessionId"
+                        element={<AliasPlaygroundPage />}
+                    />
                 </Route>
             </Route>
         </Routes>

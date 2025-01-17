@@ -1,16 +1,17 @@
 import React from "react"
-import { motion } from "motion/react"
+import { motion, MotionConfig } from "motion/react"
+import { useTranslation } from "react-i18next"
 import { Link } from "react-router"
 
-import { HomeSectionModel } from "../model/home-sections"
+import { Button } from "@/shared/ui/button"
+import aliasPreviewImage from "@/assets/images/alias4.jpg"
+
+import CreateAliasGameDialog from "./create-alias-game-dialog"
 
 const CARD_HEIGHT = 400
 
-type HomeSectionProps = {
-    homeSection: HomeSectionModel
-}
-
-function HomeSection({ homeSection }: HomeSectionProps) {
+function AliasPreviewCard() {
+    const { t } = useTranslation()
     const [isGroupHovered, setIsGroupHovered] = React.useState(false)
 
     const descriptionRef = React.useRef<HTMLParagraphElement | null>(null)
@@ -21,7 +22,7 @@ function HomeSection({ homeSection }: HomeSectionProps) {
     const contentHeight = 20 + 16 + 48 + descriptionHeight
 
     return (
-        <Link to={homeSection.url} className="w-full max-w-xl">
+        <Link to="/alias">
             <div
                 className="group relative h-[400px] w-full"
                 onMouseEnter={() => setIsGroupHovered(true)}
@@ -32,7 +33,7 @@ function HomeSection({ homeSection }: HomeSectionProps) {
                         animate={
                             isGroupHovered ? { scale: 1.25 } : { scale: 1.05 }
                         }
-                        src={homeSection.imgSrc}
+                        src={aliasPreviewImage}
                         alt=""
                         className="absolute inset-0 size-full object-cover"
                     />
@@ -57,13 +58,13 @@ function HomeSection({ homeSection }: HomeSectionProps) {
                             className="flex w-full flex-col gap-2 bg-background p-2"
                         >
                             <h3 className="text-[3rem] font-bold leading-none text-brand-title">
-                                {homeSection.name}
+                                {t("games.alias.preview.title")}
                             </h3>
                             <p
                                 ref={descriptionRef}
                                 className="text-sm text-secondary"
                             >
-                                {homeSection.decription}
+                                {t("games.alias.preview.description")}
                             </p>
                         </div>
                     </motion.div>
@@ -73,4 +74,4 @@ function HomeSection({ homeSection }: HomeSectionProps) {
     )
 }
 
-export default HomeSection
+export default AliasPreviewCard
