@@ -1,12 +1,11 @@
 import { queryOptions } from "@tanstack/react-query"
 
 import { sleep } from "@/shared/lib/utils"
-import { gameKeys } from "@/shared/model/game-keys"
-import { GameOptionsModel } from "@/shared/model/game-options"
 
 export function gamesListQuery() {
     return queryOptions({
-        queryKey: gameKeys.all,
+        //queryKey: gameKeys.all,
+        queryKey: ["games"],
         queryFn: async () => {
             await sleep(1)
 
@@ -14,7 +13,7 @@ export function gamesListQuery() {
                 {
                     name: "Codenames",
                 },
-            ] satisfies GameOptionsModel[]
+            ]
         },
     })
 }

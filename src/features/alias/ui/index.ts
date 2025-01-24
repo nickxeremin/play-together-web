@@ -1,3 +1,3 @@
-import CreateAliasRoomForm from "./create-room-form"
+import CreateAliasRoomForm from "./create-room"
 
 export { CreateAliasRoomForm }

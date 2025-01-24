@@ -4,4 +4,4 @@ import { AliasSocket } from "../model"
 
 export const aliasSocket: AliasSocket = socketManager.socket("/alias")
 
-export { aliasRoomEmitEvents } from "./room-events"
+export { useCreateAliasRoom } from "./room"

@@ -3,11 +3,9 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { Link, useNavigate } from "react-router"
 
-import {
-    createAliasRoomSchema,
-    CreateAliasRoomValues,
-} from "@/features/alias/model"
+import { useCreateRoom } from "@/shared/api/room"
 import { cn } from "@/shared/lib/utils"
+import { createRoomSchema, CreateRoomSchema } from "@/shared/model/room"
 import { Button, buttonVariants } from "@/shared/ui/button"
 import { Form } from "@/shared/ui/form"
 import { Separator } from "@/shared/ui/separator"
@@ -15,13 +13,20 @@ import { Separator } from "@/shared/ui/separator"
 function CreateAliasRoomForm() {
     const { t } = useTranslation()
 
-    const form = useForm<CreateAliasRoomValues>({
-        resolver: zodResolver(createAliasRoomSchema),
+    const form = useForm<CreateRoomSchema>({
+        resolver: zodResolver(createRoomSchema),
     })
 
     const navigate = useNavigate()
+    const { mutate: createRoom } = useCreateRoom()
 
-    async function onSubmit(values: CreateAliasRoomValues) {}
+    async function onSubmit(values: CreateRoomSchema) {
+        createRoom(values, {
+            onSuccess: ({ id }) => {
+                navigate(`/alias/${id}`)
+            },
+        })
+    }
 
     return (
         <div className="relative w-full max-w-3xl rounded-md bg-popover px-6 py-4 shadow-lg">
@@ -37,13 +42,6 @@ function CreateAliasRoomForm() {
                     </div>
 
                     <Separator />
-                    {/* 
-                    <div className="flex flex-col gap-6">
-                        <Teams />
-                        <General />
-                    </div>
-
-                    <Separator /> */}
 
                     <div className="flex items-center justify-end gap-2">
                         <Link

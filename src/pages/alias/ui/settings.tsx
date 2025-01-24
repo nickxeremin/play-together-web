@@ -6,7 +6,7 @@ import { cn } from "@/shared/lib/utils"
 import { buttonVariants } from "@/shared/ui/button"
 import { Separator } from "@/shared/ui/separator"
 
-function AliasPage() {
+function AliasSettingsPage() {
     return (
         <div className="flex flex-grow flex-col gap-4 p-4">
             <div className="flex items-center gap-2">
@@ -38,4 +38,4 @@ function AliasPage() {
     )
 }
 
-export default AliasPage
+export default AliasSettingsPage

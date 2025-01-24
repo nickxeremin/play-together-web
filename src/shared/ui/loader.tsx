@@ -13,7 +13,18 @@ function Loader({ isLoading }: IconLoaderProps) {
         return null
     }
 
-    return <IconLoader2 className="size-4 animate-spin" />
+    return <IconLoader2 strokeWidth={3} className="size-4 animate-spin" />
+}
+
+function PageLoader() {
+    return (
+        <div className="flex h-screen w-screen items-center justify-center">
+            <IconLoader2
+                strokeWidth={3}
+                className="size-12 animate-spin text-brand"
+            />
+        </div>
+    )
 }
 
 type GeometricLoaderProps = {
@@ -311,4 +322,4 @@ function GeometricLoader({
     )
 }
 
-export { Loader, GeometricLoader }
+export { Loader, PageLoader, GeometricLoader }
