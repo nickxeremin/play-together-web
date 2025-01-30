@@ -23,11 +23,11 @@
     }
 
     * {
-        @apply border-neutral-800 ring-teal-600 ring-offset-neutral-950;
+        @apply border-zinc-800 ring-teal-600 ring-offset-zinc-950;
     }
 
     body {
-        @apply bg-neutral-950 font-rubik text-slate-100;
+        @apply bg-zinc-950 font-rubik text-slate-100;
     }
 }
 
@@ -37,7 +37,7 @@
     }
 
     .dotted-pattern::before {
-        @apply bg-dotted-pattern absolute inset-0 size-full bg-[length:128px_128px] opacity-5 content-[''];
+        @apply absolute inset-0 size-full bg-dotted-pattern bg-[length:128px_128px] opacity-5 content-[''];
     }
 }
 

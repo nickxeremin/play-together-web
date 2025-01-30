@@ -1,7 +1,6 @@
 import { Outlet } from "react-router"
 
 import Footer from "@/widgets/layout/ui/footer"
-import { BackgroundDottedPattern } from "@/shared/ui/background"
 
 function RootLayout() {
     return (

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { Link, useNavigate } from "react-router"
 
+import { useClient } from "@/shared/api/client"
 import { useCreateRoom } from "@/shared/api/room"
 import { cn } from "@/shared/lib/utils"
 import { createRoomSchema, CreateRoomSchema } from "@/shared/model/room"
@@ -17,8 +18,9 @@ function CreateAliasRoomForm() {
         resolver: zodResolver(createRoomSchema),
     })
 
+    const client = useClient()
     const navigate = useNavigate()
-    const { mutate: createRoom } = useCreateRoom()
+    const { mutate: createRoom } = useCreateRoom({ client })
 
     async function onSubmit(values: CreateRoomSchema) {
         createRoom(values, {

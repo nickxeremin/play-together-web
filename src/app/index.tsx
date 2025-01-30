@@ -6,12 +6,15 @@ import AllRoutes from "./routes"
 import "./i18n"
 import "./globals.css"
 
-import ReactQueryProvider from "./providers/react-query-provider"
+import { AuthProvider } from "./providers/auth"
+import ReactQueryProvider from "./providers/react-query"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <ReactQueryProvider>
-        <BrowserRouter>
-            <AllRoutes />
-        </BrowserRouter>
-    </ReactQueryProvider>
+    <AuthProvider>
+        <ReactQueryProvider>
+            <BrowserRouter>
+                <AllRoutes />
+            </BrowserRouter>
+        </ReactQueryProvider>
+    </AuthProvider>
 )

@@ -16,7 +16,7 @@ function GamesList() {
                 <div className="flex flex-col gap-3">
                     <div
                         key={i}
-                        className="flex h-[320px] flex-col rounded-md border bg-neutral-900 p-4"
+                        className="flex h-[320px] flex-col rounded-md border bg-zinc-900 p-4"
                     ></div>
 
                     <div className="flex items-center gap-2">

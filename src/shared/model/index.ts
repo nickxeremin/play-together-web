@@ -12,3 +12,5 @@ type ServerToClientEvents = RoomServerToClientEvents & BaseServerToClientEvents
 type ClientToServerEvents = RoomClientToServerEvents
 
 export type BaseSocket = Socket<ServerToClientEvents, ClientToServerEvents>
+
+export { type MutationParams, type QueryParams } from "./api"

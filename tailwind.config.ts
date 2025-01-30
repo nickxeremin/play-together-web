@@ -42,7 +42,10 @@ export default {
                 },
 
                 // Other
-                border: "rgb(var(--border))",
+                border: {
+                    DEFAULT: "rgb(var(--border))",
+                    light: "rgb(var(--border-light))",
+                },
                 ring: "rgb(var(--ring))",
             },
             fontFamily: {
@@ -61,16 +64,16 @@ export default {
                 ":root": {
                     // Text colors
                     "--primary": hexToRgb(theme("colors.slate.100")),
-                    "--secondary": hexToRgb(theme("colors.zinc.300")),
-                    "--tertiary": hexToRgb(theme("colors.zinc.500")),
+                    "--secondary": hexToRgb(theme("colors.slate.300")),
+                    "--tertiary": hexToRgb(theme("colors.slate.400")),
 
                     // Component colors
-                    "--background": hexToRgb(theme("colors.neutral.950")),
-                    "--popover": hexToRgb(theme("colors.neutral.900")),
+                    "--background": hexToRgb(theme("colors.zinc.950")),
+                    "--popover": hexToRgb(theme("colors.zinc.900")),
                     // "--background-100": hexToRgb(theme("colors.white")),
                     // "--background-200": hexToRgb(theme("colors.white")),
-                    "--muted": hexToRgb(theme("colors.neutral.800")),
-                    "--accent": hexToRgb(theme("colors.neutral.700")),
+                    "--muted": hexToRgb(theme("colors.zinc.800")),
+                    "--accent": hexToRgb(theme("colors.zinc.700")),
                     //"--input": hexToRgb(theme("colors.white")),
 
                     // Main colors
@@ -90,7 +93,8 @@ export default {
 
                     // Other
                     "--ring": hexToRgb(theme("colors.teal.600")),
-                    "--border": hexToRgb(theme("colors.neutral.800")),
+                    "--border": hexToRgb(theme("colors.zinc.800")),
+                    "--border-light": hexToRgb(theme("colors.zinc.700")),
                 },
             })
         },

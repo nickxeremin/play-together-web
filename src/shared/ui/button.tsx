@@ -12,8 +12,8 @@ const buttonVariants = cva(
                 default: "bg-teal-600 text-white hover:bg-teal-800",
                 destructive: "bg-red-600 text-white hover:bg-red-800",
                 outline:
-                    "bg-transparent text-teal-500 border-2 hover:bg-neutral-800",
-                secondary: "bg-neutral-800 text-teal-500 hover:bg-neutral-700",
+                    "bg-transparent text-teal-500 border-2 hover:bg-zinc-800",
+                secondary: "bg-zinc-800 text-teal-500 hover:bg-zinc-700",
                 ghost: "text-tertiary hover:bg-muted hover:text-brand-light",
                 link: "text-primary underline-offset-4 hover:underline",
                 success: "bg-teal-600 hover:bg-teal-800 text-white",

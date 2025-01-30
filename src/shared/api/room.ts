@@ -1,8 +1,8 @@
 import { useMutation } from "@tanstack/react-query"
+import { AxiosInstance } from "axios"
 
 import { BaseSocket } from "../model"
 import { CreateRoomSchema, roomSchema } from "../model/room"
-import { client } from "./client"
 
 type ConnectRoom = {
     socket: BaseSocket
@@ -49,7 +49,7 @@ export function registerReconnectionRoomHandlers({
     }
 }
 
-export function useCreateRoom() {
+export function useCreateRoom({ client }: { client: AxiosInstance }) {
     return useMutation({
         mutationFn: (values: CreateRoomSchema) =>
             client
