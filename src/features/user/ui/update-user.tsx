@@ -49,14 +49,14 @@ function UpdateUserForm() {
 
           <Separator className="border-border-light" />
 
-          <div className="flex gap-4">
+          <div className="flex gap-8">
             <FormField
               control={form.control}
               name="avatar"
               render={({ field }) => (
                 <FormItem>
                   <div className="flex flex-col items-center gap-4">
-                    <Avatar className="size-48 border-4 border-border-light">
+                    <Avatar className="size-64 border-4 border-border-light">
                       <AvatarImage src={avatars[field.value as AvatarValue]} />
                       <AvatarFallback />
                     </Avatar>

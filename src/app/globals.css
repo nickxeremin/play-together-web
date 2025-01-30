@@ -3,42 +3,53 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Rubik";
-    src: url("/src/assets/fonts/Rubik-VariableFont_wght.woff2") format("woff2");
-    font-weight: 400 900;
-    font-style: normal;
+  font-family: "Rubik";
+  src: url("/src/assets/fonts/Rubik-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Orbitron";
-    src: url("/src/assets/fonts/Orbitron-VariableFont_wght.woff2")
-        format("woff2");
-    font-weight: 400 900;
-    font-style: normal;
+  font-family: "Orbitron";
+  src: url("/src/assets/fonts/Orbitron-VariableFont_wght.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
 }
 
 @layer base {
-    :root {
-        --radius: 0.5rem;
-    }
+  :root {
+    --radius: 0.5rem;
+  }
 
-    * {
-        @apply border-zinc-800 ring-teal-600 ring-offset-zinc-950;
-    }
+  * {
+    @apply border-zinc-800 ring-teal-600 ring-offset-zinc-950;
+  }
 
-    body {
-        @apply bg-zinc-950 font-rubik text-slate-100;
-    }
+  body {
+    @apply bg-zinc-950 font-rubik text-slate-100;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-border-light;
+  }
 }
 
 @layer utilities {
-    .dotted-pattern {
-        @apply relative;
-    }
+  .dotted-pattern {
+    @apply relative;
+  }
 
-    .dotted-pattern::before {
-        @apply absolute inset-0 size-full bg-dotted-pattern bg-[length:128px_128px] opacity-5 content-[''];
-    }
+  .dotted-pattern::before {
+    @apply absolute inset-0 size-full bg-dotted-pattern bg-[length:128px_128px] opacity-5 content-[''];
+  }
 }
 
 /* HTML: <div class="loader"></div> */
